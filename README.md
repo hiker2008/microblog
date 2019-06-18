@@ -373,4 +373,16 @@ check_password_hash(hash, 'barfoo')
 * 修改 app/__init__.py, forms.py, models.py, routes.py
 * 修改 app/templates/base.html login.html
 * 增加 app/templates/register.html
-### 增加 git
+
+## 第 06 部分：Profile Page and Avatars
+### 环境
+### 编辑源代码
+* 修改 user 表，增加 about_me, last_seen 字段
+```
+flask db migrate -m "new fields in user model"
+flask db upgrade
+```
+* 修改 app/forms.py models.py routes.py
+* 修改 app/templates/base.html
+* 增加 app/templates/_post.html edit_profile.html user.html
+*  
