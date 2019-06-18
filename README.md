@@ -29,7 +29,7 @@ pip install flask
 ```
 set FLASK_APP=microblog.py
 ```
-## 第一部分：Hello World
+## 第 01 章：Hello World
 [参考网址](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
 ### 编辑源代码
 * microblog.py
@@ -61,7 +61,7 @@ flask run
 ### 使用浏览器查看页面
 * [http://localhost:5000/](http://localhost:5000/)
 * [http://localhost:5000/index](http://localhost:5000/index)
-## 第二部分：Templates
+## 第 02 章：Templates
 ### 环境
 ```
 mkdir app/templates
@@ -117,7 +117,7 @@ def index():
     ]
     return render_template('index.html', title='Home', user=user, posts=posts)
 ```
-## 第三部分：Web Forms
+## 第 03 章：Web Forms
 [参考网址](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms)
 ### 环境
 ```
@@ -226,7 +226,7 @@ def login():
     return render_template('login.html', title='Sign In', form=form)
 ```
 
-## 第四部分：Database
+## 第 04 章：Database
 ### 环境
 ```
 pip install flask-sqlalchemy
@@ -355,4 +355,22 @@ db
 User
 Post
 ```
-* 
+## 第 05 章：User Login
+### 环境
+```
+pip install flask-login
+(安装 flask-login-0.4.1)
+```
+### 编辑源代码
+* 在 python 环境下测试 hash 函数
+```
+from werkzeug.security import generate_password_hash, check_password_hash
+hash = generate_password_hash('foobar')
+print(hash)
+check_password_hash(hash, 'foobar')
+check_password_hash(hash, 'barfoo')
+```
+* 修改 app/__init__.py, forms.py, models.py, routes.py
+* 修改 app/templates/base.html login.html
+* 增加 app/templates/register.html
+### 增加 git
