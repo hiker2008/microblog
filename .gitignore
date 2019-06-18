@@ -107,4 +107,4 @@ venv.bak/
 *.un~
 
 # flask venv
-/flask
+/venv
