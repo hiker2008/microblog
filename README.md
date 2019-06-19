@@ -390,7 +390,8 @@ flask db upgrade
 ### 环境
 设置环境变量 ```set FLASK_DEBUG=1```
 ### 编辑源代码
-* 编辑 app/__init.py
+* 编辑 app/__init.py, forms.py, routes.py
 * 编辑 config.py
 * 增加 app/errors.py
 * 增加 app/templates/404.html 500.html
+
